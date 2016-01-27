@@ -1,4 +1,4 @@
 exq-navbar
 .container
-  exq-stats stats=model
+  exq-stats
   = outlet

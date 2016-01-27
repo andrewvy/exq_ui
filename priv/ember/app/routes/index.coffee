@@ -1,8 +1,9 @@
 IndexRoute = Ember.Route.extend
+  stats: Ember.inject.service()
   timeout: null
   setupController: (controller, model) ->
     @_super(controller, model)
-    self = this
+    self = @
     updater = window.setInterval(->
       self.store.findAll('realtime').then((data) ->
         controller.set('dashboard_data', data)
